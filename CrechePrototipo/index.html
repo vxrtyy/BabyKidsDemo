@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Kids</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" type="image/png" href="assets/images/BabyKidsLogo.png">
+    <link rel="apple-touch-icon" href="assets/images/BabyKidsLogo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Baby Kids - Creche e Berçário em Curitiba. Educação Infantil de qualidade com estrutura moderna, alimentação saudável e equipe qualificada.">
+    <meta name="keywords" content="creche curitiba, berçário curitiba, educação infantil, baby kids">
+    <meta name="author" content="Brio Tech">
+    <meta property="og:title" content="Baby Kids - Creche e Berçário em Curitiba">
+    <meta property="og:description" content="Ambiente seguro e acolhedor para o desenvolvimento do seu filho.">
+    <meta property="og:image" content="./assets/images/BabyKidsLogo.jpg">
+    <meta property="og:url" content="https://www.babykids.com.br">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.babykids.com.br">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#E53E3E',
+                            blue: '#4299E1',
+                            pink: '#ED64A6',
+                            dark: '#1A202C',
+                            light: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        display: ['Nunito', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 10s infinite alternate',
+                        'float': 'float 6s ease-in-out infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(50px, -50px) scale(1.2)' },
+                            '66%': { transform: 'translate(-40px, 20px) scale(0.8)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-brand-dark overflow-x-hidden selection:bg-brand-blue selection:text-white relative">
+    <div class="fixed inset-0 w-full h-full pointer-events-none -z-20 overflow-hidden bg-[#fafafa]">
+        <div class="absolute inset-0 opacity-[0.4] mix-blend-overlay" style="background-image: url('https://grainy-gradients.vercel.app/noise.svg');"></div>
+        <div class="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] bg-brand-blue/30 rounded-full mix-blend-multiply filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-[-10%] right-[-10%] w-[800px] h-[800px] bg-brand-pink/30 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-[800px] h-[800px] bg-brand-red/20 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-4000"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/20 rounded-full animate-spin-slow opacity-30 hidden lg:block"></div>
+    </div>
+
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 glass-nav" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="assets/images/BabyKidsLogo.png" 
+                     onerror="this.src='https://placehold.co/100x100/FF9EB5/white?text=BK'" 
+                     alt="Baby Kids Logo" 
+                     class="h-12 w-auto drop-shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <span class="font-display font-bold text-xl text-brand-dark hidden md:block tracking-tight">Baby Kids</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-medium text-gray-600">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#metodologia" class="nav-link">Diferenciais</a>
+                <a href="#galeria" class="nav-link">Momentos</a>
+                <a href="#contato" class="btn-primary glow-effect shadow-xl shadow-brand-blue/20">
+                    Agendar Visita
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-dark p-2 hover:bg-black/5 rounded-lg transition-colors" aria-label="Abrir Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white/80 backdrop-blur-xl border-t border-white/40 p-6 flex flex-col gap-4 shadow-2xl">
+            <a href="#home" class="block text-gray-800 font-bold text-lg">Início</a>
+            <a href="#metodologia" class="block text-gray-700 font-medium">Diferenciais</a>
+            <a href="#galeria" class="block text-gray-700 font-medium">Momentos</a>
+            <a href="#contato" class="block text-brand-red font-bold">Agendar Visita</a>
+        </div>
+    </header>
+
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 min-h-screen flex items-center">
+        <div class="hero-bg-logo">
+            <img src="assets/images/BabyKidsLogo.png" alt="" draggable="false">
+        </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+
+                <div class="lg:w-1/2 text-center lg:text-left reveal active">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/40 border border-white/60 backdrop-blur-md shadow-sm mb-8 hover:bg-white/60 transition-colors cursor-default">
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-gray-700">Matrículas 2026 Abertas</span>
+                    </div>
+
+                    <h1 class="font-display text-5xl lg:text-7xl font-bold leading-[1.05] mb-8 text-slate-900 tracking-tight">
+                        Onde aprender <br>
+                        é pura <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-brand-pink to-brand-red animate-gradient-text bg-300%">magia.</span>
+                    </h1>
+
+                    <p class="text-gray-600 text-lg mb-10 leading-relaxed max-w-lg mx-auto lg:mx-0 font-light">
+                        Um ambiente moderno, seguro e cheio de afeto para os primeiros passos do seu filho rumo ao futuro.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+                        <a href="#contato" class="btn-primary glow-effect text-center px-8 py-4 text-lg">
+                            Conhecer a Escola
+                        </a>
+                        <a href="#galeria" class="px-8 py-4 rounded-2xl bg-white/40 border border-white/60 backdrop-blur-md text-gray-700 font-bold hover:bg-white/80 transition-all flex items-center justify-center gap-3 group shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <div class="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center group-hover:scale-110 transition-transform text-brand-red">
+                                <i class="fas fa-play text-sm ml-1"></i>
+                            </div>
+                            Ver o vídeo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 relative reveal">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-blue/30 to-brand-pink/30 rounded-[2.5rem] transform rotate-6 scale-105 blur-2xl opacity-80"></div>
+
+                    <div class="relative z-10 p-4 rounded-[2.5rem] bg-white/20 backdrop-blur-md border border-white/50 shadow-2xl transition-transform hover:scale-[1.02] duration-500">
+                        <img src="assets/images/Formatura.jpg" 
+                             onerror="this.src='https://placehold.co/800x600/e2e8f0/94a3b8?text=Imagem+Formatura'"
+                             alt="Formatura Baby Kids" 
+                             class="w-full h-auto rounded-[2rem] object-cover shadow-inner bg-slate-200">
+                    </div>
+
+                    <div class="absolute -bottom-8 -left-8 bg-white/80 backdrop-blur-xl p-5 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-white flex items-center gap-4 animate-float hidden md:flex z-20">
+                        <div class="w-14 h-14 bg-yellow-100/80 rounded-2xl flex items-center justify-center text-yellow-500 text-2xl shadow-sm">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div>
+                            <p class="font-display font-bold text-gray-800 text-lg leading-tight">Nota Máxima</p>
+                            <p class="text-xs text-gray-500 font-bold uppercase tracking-wide">Avaliação dos Pais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-pink-50 to-orange-50 opacity-40"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+                <div class="text-center reveal">
+                    <div class="counter" data-target="500" data-prefix="+">0</div>
+                    <p class="text-slate-600 font-semibold mt-2">Alunos Felizes</p>
+                </div>
+
+                <div class="text-center reveal delay-100">
+                    <div class="counter" data-target="16">0</div>
+                    <p class="text-slate-600 font-semibold mt-2">Anos de Experiência</p>
+                </div>
+
+                <div class="text-center reveal delay-200">
+                    <div class="counter" data-target="98">0</div>
+                    <p class="text-slate-600 font-semibold mt-2">% Satisfação</p>
+                </div>
+
+                <div class="text-center reveal delay-300">
+                    <div class="counter" data-target="25">0</div>
+                    <p class="text-slate-600 font-semibold mt-2">Profissionais</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">
+                    Certificações e Reconhecimentos
+                </h2>
+                <div class="decorative-line w-24 mx-auto"></div>
+            </div>
+
+            <div class="flex flex-wrap justify-center items-center gap-8">
+
+                <div class="floating-badge">
+                    <div class="glass-card text-center p-6 w-40">
+                        <div class="text-4xl mb-3">🏆</div>
+                        <p class="text-sm font-bold text-slate-700">MEC Aprovado</p>
+                    </div>
+                </div>
+
+                <div class="floating-badge" style="animation-delay: 0.5s;">
+                    <div class="glass-card text-center p-6 w-40">
+                        <div class="text-4xl mb-3">✅</div>
+                        <p class="text-sm font-bold text-slate-700">Vigilância Sanitária</p>
+                    </div>
+                </div>
+
+                <div class="floating-badge" style="animation-delay: 1s;">
+                    <div class="glass-card text-center p-6 w-40">
+                        <div class="text-4xl mb-3">🎓</div>
+                        <p class="text-sm font-bold text-slate-700">BNCC Alinhada</p>
+                    </div>
+                </div>
+
+                <div class="floating-badge" style="animation-delay: 1.5s;">
+                    <div class="glass-card text-center p-6 w-40">
+                        <div class="text-4xl mb-3">💚</div>
+                        <p class="text-sm font-bold text-slate-700">Sustentável</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologia" class="py-32 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+                <span class="text-brand-blue font-bold tracking-wider text-xs uppercase bg-brand-blue/10 border border-brand-blue/20 px-3 py-1 rounded-full backdrop-blur-sm">Nossa Metodologia</span>
+                <h2 class="font-display text-4xl font-bold mt-6 text-gray-900">Educação que transforma</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card group reveal">
+                    <div class="icon-box bg-blue-500/10 text-brand-blue group-hover:bg-brand-blue group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/30">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold mb-4 text-gray-800">Pedagogia Ativa</h3>
+                    <p class="text-gray-500 leading-relaxed font-light">
+                        A criança como protagonista. Aprender fazendo, explorando e descobrindo o mundo através de experiências sensoriais.
+                    </p>
+                </div>
+
+                <div class="glass-card group reveal delay-100">
+                    <div class="icon-box bg-pink-500/10 text-brand-pink group-hover:bg-brand-pink group-hover:text-white group-hover:shadow-lg group-hover:shadow-pink-500/30">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold mb-4 text-gray-800">Afeto e Segurança</h3>
+                    <p class="text-gray-500 leading-relaxed font-light">
+                        Monitoramento constante e uma equipe apaixonada. Criamos laços que dão confiança para a criança voar.
+                    </p>
+                </div>
+
+                <div class="glass-card group reveal delay-200">
+                    <div class="icon-box bg-red-500/10 text-brand-red group-hover:bg-brand-red group-hover:text-white group-hover:shadow-lg group-hover:shadow-red-500/30">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold mb-4 text-gray-800">Alimentação Vital</h3>
+                    <p class="text-gray-500 leading-relaxed font-light">
+                        Cardápio elaborado por nutricionistas, com ingredientes frescos. A saúde começa no prato.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">
+                    Nossos Espaços
+                </h2>
+                <div class="decorative-line w-24 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+                <div class="gallery-item reveal">
+                    <img src="assets/images/Sala.jpg" alt="Sala de Atividades" class="w-full h-48 object-cover">
+                    <div class="gallery-overlay">
+                        <p class="font-bold">Sala de Atividades</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal delay-100">
+                    <img src="assets/images/Dança.jpg" alt="Área Externa" class="w-full h-48 object-cover">
+                    <div class="gallery-overlay">
+                        <p class="font-bold">Área Externa</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal delay-200">
+                    <img src="assets/images/Natal.jpg" alt="Refeitório" class="w-full h-48 object-cover">
+                    <div class="gallery-overlay">
+                        <p class="font-bold">Refeitório</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal delay-300">
+                    <img src="assets/images/Baile.webp" alt="Biblioteca" class="w-full h-48 object-cover">
+                    <div class="gallery-overlay">
+                        <p class="font-bold">Biblioteca</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal gap-6">
+                <div>
+                    <span class="text-brand-pink font-bold tracking-wider text-xs uppercase bg-brand-pink/10 border border-brand-pink/20 px-3 py-1 rounded-full backdrop-blur-sm">Galeria</span>
+                    <h2 class="font-display text-4xl font-bold mt-4 text-gray-900">Momentos Inesquecíveis</h2>
+                </div>
+                <div class="hidden md:block pb-2">
+                    <span class="text-gray-400 text-sm font-light">Siga nosso Instagram @babykids</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-4 md:grid-rows-2 gap-6 h-[1000px] md:h-[650px]">
+
+                <div class="col-span-2 row-span-2 md:col-span-2 md:row-span-2 overflow-hidden rounded-[2rem] relative group reveal shadow-xl border-4 border-white/40">
+                    <img src="assets/images/Menino 2.jpg" 
+                         onerror="this.src='https://placehold.co/600x600?text=Foto'"
+                         alt="Aluna" 
+                         class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-blue/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-8 flex items-end">
+                        <span class="text-white font-bold text-2xl translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Sorrisos Diários</span>
+                    </div>
+                </div>
+
+                <div class="col-span-2 md:col-span-1 md:row-span-2 overflow-hidden rounded-[2rem] relative group reveal delay-100 shadow-xl border-4 border-white/40">
+                    <img src="assets/images/Menina.jpg" 
+                         onerror="this.src='https://placehold.co/300x600?text=Foto'"
+                         alt="Aluno" 
+                         class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+
+                <div class="col-span-1 md:col-span-1 md:row-span-1 overflow-hidden rounded-[2rem] relative group reveal delay-200 shadow-xl border-4 border-white/40">
+                    <img src="assets/images/Menina 2.jpg" 
+                         onerror="this.src='https://placehold.co/300x300?text=Foto'"
+                         alt="Aluno Thaylor" 
+                         class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+
+                <div class="col-span-1 md:col-span-1 md:row-span-1 overflow-hidden rounded-[2rem] relative group reveal delay-300 shadow-xl border-4 border-white/40">
+                    <img src="assets/images/Menino.jpg" 
+                         onerror="this.src='https://placehold.co/300x300?text=Foto'"
+                         alt="Aluno" 
+                         class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 opacity-50"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">
+                    O Que as Famílias Dizem
+                </h2>
+                <div class="decorative-line w-24 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="testimonial-card reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-400 to-orange-400 flex items-center justify-center text-white font-bold text-xl">
+                            M
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-bold text-slate-800">David Luiz Fernandes</p>
+                            <div class="text-yellow-500 text-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Escola maravilhosa e profissionais bem capacitados
+                    </p>
+                </div>
+
+                <div class="testimonial-card reveal delay-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-purple-400 flex items-center justify-center text-white font-bold text-xl">
+                            R
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-bold text-slate-800">Malu Fernanda</p>
+                            <div class="text-yellow-500 text-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Indico de olhos fechados, primeira experiência da vida escolar do nosso pequeno e ele em 1 mês se adaptou e se sente seguro e feliz... e nós pais tbem pela escolha que fizemos! Equipe atenciosa e humana e professoras super carinhosas!
+                    </p>
+                </div>
+
+                <div class="testimonial-card reveal delay-200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-teal-400 flex items-center justify-center text-white font-bold text-xl">
+                            J
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-bold text-slate-800">Eduarda Fernanda</p>
+                            <div class="text-yellow-500 text-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Excelente escola! Trabalho com total confiança em deixa meu filho e fico cada vez mais feliz ao ver o desenvolvimento dele diariamente, super indico! Qualidade, confiança e respeito
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-dark z-0"></div>
+        <div class="absolute inset-0 opacity-20 z-0" style="background-image: url('https://grainy-gradients.vercel.app/noise.svg'); mix-blend-mode: overlay;"></div>
+
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue/40 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-red/40 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="bg-white/10 backdrop-blur-2xl border border-white/10 rounded-[3rem] p-8 md:p-16 shadow-2xl flex flex-col md:flex-row gap-16 reveal overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
+
+            <div class="md:w-1/2 text-white relative">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Vamos conversar?</h2>
+                <p class="text-gray-300 mb-12 text-lg font-light leading-relaxed">
+                Agende uma visita e sinta de perto o cuidado que temos com cada detalhe. Estamos ansiosos para conhecer sua família.
+                </p>
+
+                <div class="space-y-8">
+                <div class="flex items-center gap-6 group">
+                    <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-brand-blue border border-white/10 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg">
+                    <i class="fas fa-map-marker-alt text-xl"></i>
+                    </div>
+                    <div>
+                    <p class="font-bold text-xl text-white">Localização</p>
+                    <p class="text-gray-400 group-hover:text-gray-200 transition-colors">Rua Manoel Claudino Barbosa, 2040</p>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/41984990243" target="_blank" class="flex items-center gap-6 group">
+                <div class="flex items-center gap-6 group">
+                    <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-green-400 border border-white/10 group-hover:bg-green-500 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    
+                </div>
+                <div>
+                    <p class="font-bold text-xl text-white">Whatsapp</p>
+                    <p class="text-gray-400 group-hover:text-gray-200 transition-colors">(41) 98499-0243</p>
+                    </div>
+                </div>
+
+                <a href="https://instagram.com/ceibabykids" target="_blank" class="flex items-center gap-6 group">
+                    <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-pink-400 border border-white/10 group-hover:bg-gradient-to-br group-hover:from-purple-500 group-hover:via-pink-500 group-hover:to-orange-500 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg">
+                    <i class="fab fa-instagram text-2xl"></i>
+                    </div>
+                    <div>
+                    <p class="font-bold text-xl text-white">Instagram</p>
+                    <p class="text-gray-400 group-hover:text-gray-200 transition-colors">@ceibabykids</p>
+                    </div>
+                </a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 bg-white rounded-[2.5rem] p-8 md:p-10 text-brand-dark shadow-2xl relative">
+                <form class="space-y-6" id="contactForm">
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2 ml-1">Seu Nome</label>
+                    <input type="text" class="input-field" placeholder="Nome do pai ou mãe">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2 ml-1">Email</label>
+                    <input type="email" class="input-field" placeholder="seu@email.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2 ml-1">Telefone</label>
+                    <input type="tel" class="input-field" placeholder="(00) 00000-0000">
+                </div>
+                <button type="submit" class="w-full py-4 mt-4 bg-brand-dark text-white font-bold rounded-2xl hover:bg-black transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg">
+                    Enviar Mensagem
+                </button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0f1115] text-white py-12 border-t border-white/5">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-4 opacity-80 hover:opacity-100 transition-opacity">
+                <img src="assets/images/BabyKidsLogo.png" alt="Logo" class="h-12">
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-xl tracking-tight">Baby Kids</span>
+                    <span class="text-xs text-gray-500">Centro de Educação Infantil</span>
+                </div>
+            </div>
+            <p class="text-gray-600 text-sm">© 2026. Feito com amor e tecnologia.</p>
+            <div class="flex gap-4">
+                <a href="https://instagram.com/ceibabykids" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/41984990243" target="_blank" class="whatsapp-float badge-pulse">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
