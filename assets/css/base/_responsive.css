@@ -1,0 +1,64 @@
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    .delay-100,
+    .delay-200,
+    .delay-300 {
+        transition-delay: 0ms;
+    }
+
+    .glass-card {
+        padding: 1.75rem;
+        border-radius: 1.5rem;
+    }
+
+    .glass-card:hover {
+        transform: none;
+    }
+
+    .testimonial-card:hover {
+        transform: none;
+    }
+
+    .gallery-overlay {
+        opacity: 1;
+    }
+
+    .counter {
+        font-size: 2.25rem;
+    }
+
+    .decorative-line {
+        width: 4rem;
+    }
+
+    .whatsapp-float {
+        bottom: 1rem;
+        right: 1rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.75rem;
+    }
+
+    .floating-badge {
+        animation: none;
+    }
+
+    .icon-box {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.4rem;
+    }
+}
