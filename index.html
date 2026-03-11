@@ -63,9 +63,9 @@
 <body class="bg-slate-50 text-brand-dark overflow-x-hidden selection:bg-brand-blue selection:text-white relative">
     <div class="fixed inset-0 w-full h-full pointer-events-none -z-20 overflow-hidden bg-[#fafafa]">
         <div class="absolute inset-0 opacity-[0.4] mix-blend-overlay" style="background-image: url('https://grainy-gradients.vercel.app/noise.svg');"></div>
-        <div class="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] bg-brand-blue/30 rounded-full mix-blend-multiply filter blur-[100px] animate-blob"></div>
-        <div class="absolute top-[-10%] right-[-10%] w-[800px] h-[800px] bg-brand-pink/30 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-[-20%] left-[20%] w-[800px] h-[800px] bg-brand-red/20 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-4000"></div>
+        <div class="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] bg-brand-blue/30 rounded-full mix-blend-multiply filter blur-[100px] animate-blob hidden md:block"></div>
+        <div class="absolute top-[-10%] right-[-10%] w-[800px] h-[800px] bg-brand-pink/30 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-2000 hidden md:block"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-[800px] h-[800px] bg-brand-red/20 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-4000 hidden md:block"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/20 rounded-full animate-spin-slow opacity-30 hidden lg:block"></div>
     </div>
 
@@ -149,6 +149,7 @@
                         <img src="assets/images/Formatura.jpg" 
                              onerror="this.src='https://placehold.co/800x600/e2e8f0/94a3b8?text=Imagem+Formatura'"
                              alt="Formatura Baby Kids" 
+                             loading="lazy"
                              class="w-full h-auto rounded-[2rem] object-cover shadow-inner bg-slate-200">
                     </div>
 
@@ -246,11 +247,11 @@
 
     <section id="metodologia" class="py-32 relative overflow-hidden">
         <!-- Logo Watermark & Blobs -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none -z-10">
-            <img src="assets/images/BabyKidsLogo.png" alt="" class="w-[500px] md:w-[800px] h-auto filter blur-[2px]">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none -z-10 hidden md:block">
+            <img src="assets/images/BabyKidsLogo.png" alt="" class="w-[500px] md:w-[800px] h-auto filter blur-[2px]" loading="lazy">
         </div>
-        <div class="absolute top-[20%] left-[-5%] w-72 h-72 bg-brand-blue/10 rounded-full blur-3xl -z-10"></div>
-        <div class="absolute bottom-[10%] right-[-5%] w-80 h-80 bg-brand-pink/10 rounded-full blur-3xl -z-10 animate-blob"></div>
+        <div class="absolute top-[20%] left-[-5%] w-72 h-72 bg-brand-blue/10 rounded-full blur-3xl -z-10 hidden md:block"></div>
+        <div class="absolute bottom-[10%] right-[-5%] w-80 h-80 bg-brand-pink/10 rounded-full blur-3xl -z-10 animate-blob hidden md:block"></div>
 
         <div class="container mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-20 reveal">
@@ -429,7 +430,7 @@
 
                 <div class="lg:w-1/2 relative reveal">
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-                        <img src="assets/images/Dança.jpg" alt="Atividades Extracurriculares" class="w-full h-[500px] object-cover">
+                        <img src="assets/images/Dança.jpg" alt="Atividades Extracurriculares" class="w-full h-[500px] object-cover" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/60 to-transparent flex items-end p-8">
                             <p class="text-white font-medium text-lg italic">"Crianças que vivenciam a arte e a cultura se tornam adultos mais criativos."</p>
                         </div>
@@ -520,6 +521,7 @@
                     <img src="assets/images/Menino 2.jpg" 
                          onerror="this.src='https://placehold.co/600x600?text=Foto'"
                          alt="Aluna" 
+                         loading="lazy"
                          class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-blue/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-8 flex items-end">
                         <span class="text-white font-bold text-2xl translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Sorrisos Diários</span>
@@ -530,6 +532,7 @@
                     <img src="assets/images/Menina.jpg" 
                          onerror="this.src='https://placehold.co/300x600?text=Foto'"
                          alt="Aluno" 
+                         loading="lazy"
                          class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
                 </div>
 
@@ -537,6 +540,7 @@
                     <img src="assets/images/Menina 2.jpg" 
                          onerror="this.src='https://placehold.co/300x300?text=Foto'"
                          alt="Aluno Thaylor" 
+                         loading="lazy"
                          class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
                 </div>
 
@@ -544,6 +548,7 @@
                     <img src="assets/images/Menino.jpg" 
                          onerror="this.src='https://placehold.co/300x300?text=Foto'"
                          alt="Aluno" 
+                         loading="lazy"
                          class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
                 </div>
 

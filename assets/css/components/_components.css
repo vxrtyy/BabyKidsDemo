@@ -1,12 +1,21 @@
 .glass-card {
     background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 2.5rem;
     border-radius: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.6);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), background 0.5s ease, box-shadow 0.5s ease;
+    will-change: transform;
+}
+
+@media (max-width: 768px) {
+    .glass-card {
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        background: rgba(255, 255, 255, 0.65);
+    }
 }
 
 .glass-card:hover {
@@ -104,17 +113,26 @@
 /* --- Age Groups (Faixas Etárias) --- */
 .age-card {
     background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 2rem;
     padding: 2.5rem;
     border: 1px solid rgba(255, 255, 255, 0.8);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease;
     position: relative;
     overflow: hidden;
     height: 100%;
     display: flex;
     flex-direction: column;
+    will-change: transform;
+}
+
+@media (max-width: 768px) {
+    .age-card {
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        background: rgba(255, 255, 255, 0.7);
+    }
 }
 
 .age-card::before {
@@ -161,7 +179,14 @@
     border-radius: 1.5rem;
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
+    will-change: transform;
+}
+
+@media (max-width: 768px) {
+    .activity-item {
+        background: rgba(255, 255, 255, 0.6);
+    }
 }
 
 .activity-item:hover {
