@@ -5,6 +5,7 @@ html {
 
 body {
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -19,3 +20,8 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+.bg-dots {
+    background-image: radial-gradient(rgba(66, 153, 225, 0.15) 2px, transparent 2px);
+    background-size: 30px 30px;
+}
