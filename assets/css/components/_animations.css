@@ -39,3 +39,16 @@
     0%, 100% { opacity: 0.6; }
     50%       { opacity: 1; }
 }
+
+/* Performance optimization for mobile: 
+   Keep visual elements but disable heavy repaint animations 
+   so the phone doesn't process reflows on blurred elements continuously. */
+@media (max-width: 768px) {
+    .animate-blob, 
+    .animate-float, 
+    .animate-spin-slow,
+    .badge-pulse {
+        animation: none !important;
+        transform: translateZ(0) !important;
+    }
+}
