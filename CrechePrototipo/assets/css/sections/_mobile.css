@@ -271,3 +271,14 @@
     font-size: 1.5rem;
 }
 
+#galeria .flex.flex-col.md\:flex-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#galeria h2 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+}
